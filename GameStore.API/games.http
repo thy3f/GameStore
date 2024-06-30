@@ -8,10 +8,10 @@ POST http://localhost:5086/games
 Content-Type: application/json
 
 {
-    "name": "Final Fantasy XIV",
-    "genreId": 2,
-    "price": 59.99,
-    "releaseDate": "2010-09-30"
+    "name": "Minecraft",
+    "genreId": 5,
+    "price": 19.99,
+    "releaseDate": "2011-11-18"
 }
 
 ###
@@ -20,8 +20,8 @@ Content-Type: application/json
 
 {
     "name": "Street Fighter II Turbo",
-    "genre": "Fighting",
-    "price": 9.99,
+    "genreId": 1,
+    "price": 19.99,
     "releaseDate": "1991-01-05"
 }
 
