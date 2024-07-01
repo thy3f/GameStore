@@ -1,5 +1,5 @@
-/bin
-/obj
+*/bin
+*/obj
 GameStore.db
 GameStore.db-shm
 GameStore.db-wal
