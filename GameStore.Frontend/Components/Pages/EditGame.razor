@@ -1,5 +1,7 @@
 ﻿@page "/editgame"
 @inject NavigationManager NavigationManager
+@inject GamesClient GamesClient
+@inject GenresClient GenresClient
 
 <PageTitle>New game</PageTitle>
 <h3>New Game</h3>
@@ -51,19 +53,16 @@ else
         ReleaseDate = DateOnly.FromDateTime(DateTime.UtcNow)
     };
 
-    private GenresClient genresClient = new GenresClient();
-    private GamesClient gamesClient = new GamesClient();
-
     private Genre[]? genres;
 
     protected override void OnInitialized()
     {
-        genres = genresClient.GetGenres();
+        genres = GenresClient.GetGenres();
     }
 
     private void HandleSubmit()
     {
-        gamesClient.AddGame(game);
+        GamesClient.AddGame(game);
         NavigationManager.NavigateTo("/");
     }
 }
